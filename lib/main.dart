@@ -31,14 +31,15 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.of(context).pushNamed('/page2');
-        },
-        child: const Text('Go to page 2'),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed('/page2');
+          },
+          child: const Text('Go to page 2'),
+        ),
       ),
-    ));
+    );
   }
 }
 

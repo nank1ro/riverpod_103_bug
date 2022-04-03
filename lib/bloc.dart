@@ -18,10 +18,6 @@ final someFutureProvider = AutoDisposeFutureProvider<String>((ref) async {
 class SomeBLoC extends StateNotifier<int> {
   SomeBLoC() : super(0);
 
-  void increment() => state++;
-
-  void decrement() => state--;
-
   Future<String> someFuture() => Future.delayed(
         const Duration(seconds: 1),
         () => 'Something',
