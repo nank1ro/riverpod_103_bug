@@ -7,7 +7,7 @@ final someBLoCProvider = AutoDisposeStateNotifierProvider<SomeBLoC, int>((ref) {
     print("never disposed");
   });
   return SomeBLoC();
-}, name: 'counterBLoCProvider');
+}, name: 'someBLoCProvider');
 
 final someFutureProvider = AutoDisposeFutureProvider<String>((ref) async {
   final result = ref.watch(someBLoCProvider.notifier).someFuture();
