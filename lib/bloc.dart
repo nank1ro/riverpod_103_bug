@@ -10,7 +10,7 @@ final someBLoCProvider = AutoDisposeStateNotifierProvider<SomeBLoC, int>((ref) {
 }, name: 'someBLoCProvider');
 
 final someFutureProvider = AutoDisposeFutureProvider<String>((ref) async {
-  final result = ref.watch(someBLoCProvider.notifier).someFuture();
+  final result = await ref.watch(someBLoCProvider.notifier).someFuture();
   ref.maintainState = true;
   return result;
 }, name: 'someFutureProvider');
